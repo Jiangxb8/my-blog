@@ -1,0 +1,7 @@
+- class_name: 推荐博客
+  class_desc: 值得一读的好博客
+  link_list:
+    - name: ooo.run
+      link: https://ooo.run
+      avatar: https://ooo.run/favicon.ico
+      descr: 参考的博客
