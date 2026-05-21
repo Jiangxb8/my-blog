@@ -1,0 +1,109 @@
+/* ================================================
+   uriosh.com — 青草绿主题（仅样式，不改布局）
+   ================================================ */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display',
+    'SF Pro Text', 'Helvetica Neue', Arial, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  background: #f0f9f4 !important;
+}
+
+/* 导航栏：毛玻璃 */
+#nav {
+  background: rgba(240, 249, 244, 0.85) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border-bottom: 1px solid rgba(82, 183, 136, 0.15) !important;
+  box-shadow: none !important;
+}
+#nav .site-name a,
+#nav .menus_item a { color: #2d6a4f !important; font-weight: 500; }
+#nav .menus_item a:hover { color: #52b788 !important; }
+
+/* 文章卡片 */
+.recent-post-item {
+  background: #ffffff !important;
+  border-radius: 14px !important;
+  border: 1px solid rgba(82, 183, 136, 0.15) !important;
+  box-shadow: 0 2px 12px rgba(82, 183, 136, 0.08) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+.recent-post-item:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 28px rgba(82, 183, 136, 0.16) !important;
+}
+
+/* 侧边栏卡片 */
+#aside-content .card-widget {
+  background: #ffffff !important;
+  border-radius: 14px !important;
+  border: 1px solid rgba(82, 183, 136, 0.15) !important;
+  box-shadow: 0 2px 12px rgba(82, 183, 136, 0.08) !important;
+}
+
+/* 文章页 */
+.post, #post {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid rgba(82, 183, 136, 0.12);
+  box-shadow: 0 2px 12px rgba(82, 183, 136, 0.08);
+}
+
+/* 标签胶囊 */
+#article-container .tag_list a,
+.tag-list-item a {
+  border-radius: 20px !important;
+  padding: 2px 12px !important;
+  font-size: 13px !important;
+  background: rgba(82, 183, 136, 0.09) !important;
+  color: #40916c !important;
+  border: none !important;
+}
+#article-container .tag_list a:hover,
+.tag-list-item a:hover { background: rgba(82, 183, 136, 0.18) !important; }
+
+/* 引用块 */
+#article-container blockquote {
+  border-left: 3px solid #52b788 !important;
+  background: rgba(82, 183, 136, 0.05) !important;
+  border-radius: 0 8px 8px 0 !important;
+  color: #2d6a4f !important;
+}
+
+/* 按钮 */
+.card-widget .card-btn a { border-radius: 20px !important; font-weight: 500 !important; }
+
+/* 页脚 */
+#footer {
+  background: rgba(240, 249, 244, 0.95) !important;
+  border-top: 1px solid rgba(82, 183, 136, 0.12) !important;
+}
+
+/* 滚动条 */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-thumb { background: rgba(82,183,136,0.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(82,183,136,0.55); }
+::-webkit-scrollbar-track { background: transparent; }
+
+/* 选中文字 */
+::selection { background: rgba(82,183,136,0.2); color: inherit; }
+
+/* 暗色模式 */
+[data-theme='dark'] body { background: #1a2e24 !important; }
+[data-theme='dark'] #nav {
+  background: rgba(26,46,36,0.85) !important;
+  border-bottom-color: rgba(82,183,136,0.15) !important;
+}
+[data-theme='dark'] #nav .site-name a,
+[data-theme='dark'] #nav .menus_item a { color: #b7e4c7 !important; }
+[data-theme='dark'] .recent-post-item,
+[data-theme='dark'] #aside-content .card-widget,
+[data-theme='dark'] .post,
+[data-theme='dark'] #post {
+  background: #1e3a2a !important;
+  border-color: rgba(82,183,136,0.12) !important;
+}
+[data-theme='dark'] #footer {
+  background: rgba(26,46,36,0.95) !important;
+}

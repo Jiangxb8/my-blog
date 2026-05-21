@@ -1,0 +1,196 @@
+/* ================================================
+   uriosh.com — Anzhiyu 自定义样式
+   淡绿背景 · 作者卡参考 ooo.run Mr.O 风格
+   ================================================ */
+
+/* ------------------------------------------------
+   全局淡绿背景
+   ------------------------------------------------ */
+:root,
+[data-theme='light'] {
+  --anzhiyu-background: #f4faf6 !important;
+  --anzhiyu-secondbg: #ffffff !important;
+}
+body,
+#body-wrap {
+  background: #f4faf6 !important;
+}
+
+/* ------------------------------------------------
+   作者卡：从绿底改为白底虚线（参考 ooo.run Mr.O）
+   ------------------------------------------------ */
+#aside-content #card-info {
+  background: #ffffff !important;
+  background-image: none !important;
+  border: 1.5px dashed rgba(149, 213, 178, 0.55) !important;
+  border-radius: 14px !important;
+  color: #2d6a4f !important;
+  box-shadow: 0 2px 12px rgba(149, 213, 178, 0.10) !important;
+  overflow: visible !important;
+}
+
+/* 卡片整体内部布局：纵向居中 */
+#aside-content #card-info > .author-info {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+/* 头像：居中显示，移除白色描边光环 */
+#aside-content #card-info #author-avatar-img,
+#aside-content #card-info .author-info__sayhi-wrapper {
+  margin: 0 auto !important;
+}
+
+#aside-content #card-info #author-avatar-img {
+  width: 110px !important;
+  height: 110px !important;
+  border: 3px solid #ffffff !important;
+  box-shadow: 0 4px 16px rgba(149, 213, 178, 0.25) !important;
+}
+
+/* 作者名 */
+#aside-content #card-info .author-info__name {
+  color: #1d3a2a !important;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  margin-top: 12px !important;
+  text-align: center !important;
+}
+
+/* 作者简介 */
+#aside-content #card-info .author-info__description,
+#aside-content #card-info .author-info__sayhi {
+  color: #6c757d !important;
+  font-size: 13px !important;
+  line-height: 1.65 !important;
+  text-align: center !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+/* 社交图标：放底部，淡灰背景，悬浮变绿 */
+#aside-content #card-info .card-info-social-icons {
+  margin-top: 14px !important;
+  justify-content: center !important;
+  display: flex !important;
+  gap: 10px !important;
+}
+#aside-content #card-info .card-info-social-icons .social-icon {
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 50% !important;
+  background: rgba(149, 213, 178, 0.15) !important;
+  color: #40916c !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 16px !important;
+  transition: background 0.2s, transform 0.2s !important;
+}
+#aside-content #card-info .card-info-social-icons .social-icon:hover {
+  background: rgba(149, 213, 178, 0.3) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* "关注 / Follow" 按钮整体调浅 */
+#aside-content #card-info #card-info-btn {
+  background: rgba(149, 213, 178, 0.18) !important;
+  color: #2d6a4f !important;
+  border-radius: 20px !important;
+}
+#aside-content #card-info #card-info-btn:hover {
+  background: rgba(149, 213, 178, 0.30) !important;
+}
+
+/* ------------------------------------------------
+   通用卡片：淡虚线边
+   ------------------------------------------------ */
+#aside-content .card-widget,
+.recent-post-item,
+#post,
+.layout > div:first-child > .post {
+  border: 1px dashed rgba(149, 213, 178, 0.40) !important;
+  background: #ffffff !important;
+  box-shadow: 0 2px 12px rgba(149, 213, 178, 0.08) !important;
+}
+
+/* ------------------------------------------------
+   分类卡片：颜色圆点更淡
+   ------------------------------------------------ */
+#card-categories .card-category-list-item .card-category-list-link::before {
+  filter: saturate(0.7) brightness(1.05);
+}
+
+/* ------------------------------------------------
+   导航栏：毛玻璃淡绿 + 暗色切换按钮
+   ------------------------------------------------ */
+#nav {
+  background: rgba(244, 250, 246, 0.82) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border-bottom: 1px solid rgba(149, 213, 178, 0.18) !important;
+}
+
+#nav-darkmode-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #2d6a4f;
+  background: transparent;
+  transition: background 0.2s, color 0.2s;
+}
+#nav-darkmode-btn:hover {
+  background: rgba(149, 213, 178, 0.18);
+}
+#nav-darkmode-btn i {
+  font-size: 17px;
+}
+[data-theme='dark'] #nav-darkmode-btn { color: #b7e4c7; }
+
+/* ------------------------------------------------
+   页脚：淡绿
+   ------------------------------------------------ */
+#footer {
+  background: rgba(244, 250, 246, 0.96) !important;
+}
+#footer-wrap {
+  background: transparent !important;
+}
+
+/* ------------------------------------------------
+   暗色模式
+   ------------------------------------------------ */
+[data-theme='dark'] body,
+[data-theme='dark'] #body-wrap {
+  background: #1a2e24 !important;
+}
+[data-theme='dark'] #aside-content #card-info {
+  background: #1e3a2a !important;
+  border-color: rgba(149, 213, 178, 0.25) !important;
+}
+[data-theme='dark'] #aside-content #card-info .author-info__name {
+  color: #d8f3dc !important;
+}
+[data-theme='dark'] #aside-content #card-info .author-info__description,
+[data-theme='dark'] #aside-content #card-info .author-info__sayhi {
+  color: #a8c5b5 !important;
+}
+[data-theme='dark'] #aside-content .card-widget,
+[data-theme='dark'] .recent-post-item,
+[data-theme='dark'] #post {
+  background: #1e3a2a !important;
+  border-color: rgba(149, 213, 178, 0.18) !important;
+}
+[data-theme='dark'] #nav {
+  background: rgba(26, 46, 36, 0.85) !important;
+}
+[data-theme='dark'] #footer {
+  background: rgba(26, 46, 36, 0.96) !important;
+}
