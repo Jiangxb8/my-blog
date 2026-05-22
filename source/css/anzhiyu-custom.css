@@ -165,6 +165,15 @@ body,
 }
 
 /* ------------------------------------------------
+   文章版权卡：装饰字母 C → U
+   ------------------------------------------------ */
+.post-copyright .copyright-cc-box .anzhiyufont.anzhiyu-icon-copyright::before {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', Arial, sans-serif !important;
+  content: 'U' !important;
+  font-style: normal !important;
+}
+
+/* ------------------------------------------------
    暗色模式
    ------------------------------------------------ */
 [data-theme='dark'] body,
